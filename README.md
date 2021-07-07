@@ -6,7 +6,7 @@ An agent-based model was used to simulate predator-prey ecosystems where foxes a
 ~~  
 Old McRobin had a farm, E-I-E-I-O,  
 And on his farm he had n foxes.... where n is an integer between 10 to 20 and is configurable from the slider `initial-foxes`....., E-I-E-I-O  
-And he also had m rabbits.... where m is an integer between 50 to 100 and is configurable from the slider `initial-rabbits`....., E-I-E-I-O
+And he also had m rabbits.... where m is an integer between 50 to 100 and is configurable from the slider `initial-rabbits`....., E-I-E-I-O  
 ~~
 
 On one fine day while McRobin was huddling up the foxes (because foxes are cool and so is McRobin) back to their gated areas, his phone suddenly lit up. Upon checking, it was a notification of a new sudden drop of MV (music video) of his favorite k-pop group TWICE. Without a second thought, Robin hurriedly dashed back to his 10-storey farm to open his 8 devices to stream the new MV so that the video gets lots of views. Little did he know, while he was rushing home, he forgot to properly lock the gated area of the foxes. Now, the foxes are about to have the meal of their lives with the rabbits freely hopping around the area. What happens now? Well run our Netlogo application to find out!!!
