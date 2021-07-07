@@ -3,11 +3,11 @@ Agent-based predator-prey ecosystem simulation using NetLogo
 An agent-based model was used to simulate predator-prey ecosystems where foxes are the predators and rabbits are the prey. Different parameters of the model can be adjusted to simulate different scenarios. 
 
 ## Members: 
-Co, Sean
-Evangelista, Jason
-Lua, Neil Matthew
-Reyes, Robin Jerome
-Tanting, Kurt Bradley
+- Co, Sean
+- Evangelista, Jason
+- Lua, Neil Matthew
+- Reyes, Robin Jerome
+- Tanting, Kurt Bradley
 
 ## Agents:
 1. Fox
