@@ -36,7 +36,7 @@ to setup
   [
     set shape "wolf 3" ;this shape kinda looks like a fox
     set color black
-    set energy 100 ;initial energy
+    set energy 50 ;initial energy
     setxy 0 0 ;all foxes start at the center
   ]
 
@@ -46,10 +46,11 @@ end
 to go
   ask patches [ grow-carrots ] ;set carrot patches to regrow once eaten
 
-  if not any? turtles [ stop ] ;stop program once there are no turtles present
+  if ticks >= 500 [ stop ]
+  ;if not any? turtles [ stop ] ;stop program once there are no turtles present
 
   ; stop the model if there are no more preys or no more predators
-  if not any? foxes [ stop ]
+  ;if not any? foxes [ stop ]
   if not any? rabbits [ stop ]
 
   ;rabbit breed actions
@@ -115,7 +116,7 @@ end
 to reproduce-rabbit
   if random 100 < reproduction-rate [
     set energy (energy / 4)
-    hatch 1 [ rt random 50 fd 1 ]
+    hatch 2 [ rt random 50 fd 1 ]
   ]
 end
 
@@ -130,6 +131,11 @@ end
 ;remove breed instances once the energy of a breed reaches 0
 to starve
   if energy < 0 [ die ]
+end
+
+to-report carrots
+  report patches with [pcolor = orange]
+
 end
 @#$#@#$#@
 GRAPHICS-WINDOW
@@ -202,7 +208,7 @@ initial-rabbits
 initial-rabbits
 50
 100
-50.0
+100.0
 1
 1
 NIL
@@ -216,18 +222,18 @@ SLIDER
 initial-foxes
 initial-foxes
 10
-20
-10.0
+100
+50.0
 1
 1
 NIL
 HORIZONTAL
 
 MONITOR
-25
-400
-133
-445
+22
+403
+89
+448
 Rabbits
 count rabbits
 17
@@ -239,8 +245,8 @@ PLOT
 461
 686
 644
-Turtle Count
-Time
+Monitor Count
+Tick
 Count
 0.0
 100.0
@@ -252,12 +258,13 @@ true
 PENS
 "rabbits" 1.0 0 -1664597 true "" "plot count rabbits"
 "foxes" 1.0 0 -5204280 true "" "plot count foxes"
+"carrots" 1.0 0 -7500403 true "" "plot count carrots"
 
 MONITOR
-151
-399
-260
-444
+107
+403
+175
+448
 Foxes
 count foxes
 17
@@ -308,6 +315,17 @@ rabbit-energy
 1
 NIL
 HORIZONTAL
+
+MONITOR
+192
+402
+260
+447
+Carrots
+count carrots
+17
+1
+11
 
 @#$#@#$#@
 ## WHAT IS IT?
